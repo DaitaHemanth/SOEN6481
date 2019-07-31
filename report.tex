@@ -1,0 +1,405 @@
+
+
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+
+\usepackage[normalem]{ulem}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{graphicx, tabularx}
+\usepackage[backend=biber,
+style=numeric,
+sorting=none,
+isbn=false,
+doi=false,
+url=false,
+]{biblatex}\addbibresource{bibliography.bib}
+
+\usepackage{subfig}
+\usepackage{wrapfig}
+\usepackage{wasysym}
+\usepackage{enumitem}
+\usepackage{adjustbox}
+\usepackage{ragged2e}
+\usepackage[svgnames,table]{xcolor}
+\usepackage{tikz}
+\usepackage{longtable}
+\usepackage{changepage}
+\usepackage{setspace}
+\usepackage{hhline}
+\usepackage{multicol}
+\usepackage{tabto}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{fancyhdr}
+\usepackage[toc,page]{appendix}
+\usepackage[hidelinks]{hyperref}
+\usetikzlibrary{shapes.symbols,shapes.geometric,shadows,arrows.meta}
+\tikzset{>={Latex[width=1.5mm,length=2mm]}}
+\usepackage{flowchart}\usepackage[paperheight=11.0in,paperwidth=8.5in,left=1.0in,right=1.0in,top=1.0in,bottom=1.0in,headheight=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\TabPositions{0.5in,1.0in,1.5in,2.0in,2.5in,3.0in,3.5in,4.0in,4.5in,5.0in,5.5in,6.0in,}
+
+\urlstyle{same}
+
+
+ %%%%%%%%%%%%  Set Depths for Sections  %%%%%%%%%%%%%%
+
+% 1) Section
+% 1.1) SubSection
+% 1.1.1) SubSubSection
+% 1.1.1.1) Paragraph
+% 1.1.1.1.1) Subparagraph
+
+
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+
+ %%%%%%%%%%%%  Set Depths for Nested Lists created by \begin{enumerate}  %%%%%%%%%%%%%%
+
+
+\setlistdepth{9}
+\renewlist{enumerate}{enumerate}{9}
+		\setlist[enumerate,1]{label=\arabic*)}
+		\setlist[enumerate,2]{label=\alph*)}
+		\setlist[enumerate,3]{label=(\roman*)}
+		\setlist[enumerate,4]{label=(\arabic*)}
+		\setlist[enumerate,5]{label=(\Alph*)}
+		\setlist[enumerate,6]{label=(\Roman*)}
+		\setlist[enumerate,7]{label=\arabic*}
+		\setlist[enumerate,8]{label=\alph*}
+		\setlist[enumerate,9]{label=\roman*}
+
+\renewlist{itemize}{itemize}{9}
+		\setlist[itemize]{label=$\cdot$}
+		\setlist[itemize,1]{label=\textbullet}
+		\setlist[itemize,2]{label=$\circ$}
+		\setlist[itemize,3]{label=$\ast$}
+		\setlist[itemize,4]{label=$\dagger$}
+		\setlist[itemize,5]{label=$\triangleright$}
+		\setlist[itemize,6]{label=$\bigstar$}
+		\setlist[itemize,7]{label=$\blacklozenge$}
+		\setlist[itemize,8]{label=$\prime$}
+
+\setlength{\topsep}{0pt}\setlength{\parindent}{0pt}
+
+ %%%%%%%%%%%%  This sets linespacing (verticle gap between Lines) Default=1 %%%%%%%%%%%%%%
+
+
+\renewcommand{\arraystretch}{1.3}
+
+
+\title{Interview Details}
+\author{Venkata Sai Parthasarathi Hemanth }
+\date{Interviewer:Venkata Sai Parthasarathi Hemanth}
+
+\author{Interviewer:Venkata Sai Parthasarathi Hemanth}
+\author{Interviewee:Vedant Saini}
+
+\begin{document}
+\begin{rSection}
+{\Large \textbf{Liouville's Constant Introduction}}\vspace{1em}
+\end{rSection}
+
+
+Liouville 's constant, sometimes also called Liouville's number, is the real number defined by\newline
+\newline
+$L=\sum_{n=1}^{\infty} 10^{-n!}=0.110001000000000000000001$.......\newline
+
+
+Liouville's constant is a decimal fraction with a 1 in each decimal place corresponding to a factorial n! and zeros everywhere else. Liouville constructed an infinite class of transcendental numbers using continued fractions, but the above number was the first decimal constant to be proven transcendental. However, Cantor subsequently proved that "almost all" real numbers are in fact transcendental.
+Liouville's constant nearly satisfies\newline
+\newline
+\newline
+$10x^{6}-75x^{3}-190x+21=0$,
+\newline
+\newline\newline
+which has solution 0.1100009999..., but plugging x= L into this equation gives -0.0000000059 instead of 0.
+\newline
+\newline
+\begin{rSection}
+{\small \textbf{The existence of Liouville numbers (Liouville's constant):}}\vspace{1em}\newline
+\newline
+\end{rSection}
+Here we show that Liouville numbers exist by exhibiting a construction that produces such numbers.
+For any integer b ≥ 2, and any sequence of integers (a1, a2, …, ), such that ak ∈ {0, 1, 2, …, b − 1} ∀k ∈ {1, 2, 3, …} and there are infinitely many k with ak ≠ 0, define the number
+\newline
+\newline
+\newline
+$x=\sum_{k=1}^{\infty}\frac{a_k}{b^{k!}}$
+\newline
+\newline
+In the special case when b = 10, and ak = 1, ∀k, the resulting number x is called Liouville's constant:\newline
+\newline
+L = 0.110001000000000000000001000000000000000000000000000000000000000000\newline00000000000000000000000000000000000000000000000000001...\newline
+It follows from the definition of x that its base-b representation is\newline
+\includegraphics{images/Capture1.PNG}\newline
+where the nth term is separated from the next term by (nn!{-1}) zeros.\newline
+\newline
+Since this base-b representation is non-repeating it follows that x cannot be rational. Therefore, for any rational number p/q, we have |x {-} p/q | >0.\newline
+\newline
+\includegraphics{images/Capture2.PNG}\newline
+\newline
+\newline
+Establishing that a given number is a Liouville number provides a useful tool for proving a given number is transcendental. However, not every transcendental number is a Liouville number. The terms in the continued fraction expansion of every Liouville number are unbounded; using a counting argument, one can then show that there must be uncountably many transcendental numbers which are not Liouville. Using the explicit continued fraction expansion of e, one can show that e is an example of a transcendental number that is not Liouville.
+
+The proof proceeds by first establishing a property of irrational algebraic numbers. This property essentially says that irrational algebraic numbers cannot be well approximated by rational numbers, where the condition for "well approximated" becomes more stringent for larger denominators. A Liouville number is irrational but does not have this property, so it can't be algebraic and must be transcendental.
+\newpage
+\maketitle
+\begin{itemize}
+\item
+Interviewer: Do you have any idea about Liouville’s constant?\newline
+Interviewee: it is a constant represented as 
+$L=\sum_{n=1}^{\infty} 10^{-n!}$.\newline
+\item
+Interviewer: Are there any uses of this constant practically?\newline
+Interviewee: I know that by establishing that a given number is a Liouville number, it provides a useful tool for proving a given number is transcendental. \newline
+\item
+Interviewer: Is there anything interesting to know about this number?\newline
+Interviewee: Yes. The number was the first ever decimal constant to be proven transcendental.\newline
+\item
+Interviewer: How frequently is this constant used in daily life? \newline
+Interviewee: This is not used frequently in everyday scenarios.\newline
+\item
+Interviewer: What would you like the calculator size to be?\newline
+Interviewee: I would like if the calculator could fit in my palm so that it is easy to hold.\newline
+\item
+Interviewer: Would you prefer having the basic operators at the same place or at random places?\newline
+Interviewee: Since these operators are frequently used in calculations, I would want these operators to be in the same place. \newline
+\item
+ Interviewer: What additional button/buttons would you prefer in the calculator?\newline
+ Interviewee: It would be helpful if there is a history button so that I can track the operations made.\newline
+ 
+ Interview Analysis: Vedant was clear in what he wanted and the way he wanted to use the calculator. He wanted the calculator to be according to his comforts. He wants to calculate the Liouville's constant using the calculator. Vedant wants all the basic and frequently used operator to be in the same place. 
+
+
+\end{itemize}
+\newpage
+\vspace{\baselineskip}
+\begin{rSection}
+{\Large \textbf{PERSONA DETAILS}}\vspace{1em}
+\end{rSection}
+\begin{center}
+\begin{tabular}{ | m{40em} | } 
+\hline
+\textbf{Private Information} \\
+\begin{minipage}{0.68\textwidth}
+1) Name: Vedant Saini \\
+2) Occupation: Embedded Software Engineer\\
+3) Qualification: Pursued Masters in Electrical And Computer Engineering\\
+4) University: McGill University, Montreal, Canada\\
+Vedant lives in Toronto with his family.\\
+Vedant is a professional football player and he loves singing.\\
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+\fbox{\includegraphics[width=\linewidth, height=4cm]{images/Vedant.jpeg}}
+\end{minipage}
+\\
+\hline
+\textbf{Use of louville's constant} \\
+1) Vedant doesn't use Louville's number in his workplace or daily life.\\
+2) Their significance is relatively esoteric mathematical theory which really has no practical use.\\
+\\
+\hline
+\textbf{Vedant's work or daily life} \\
+1) Vedant completed his Masters in Electrical and Computer Engineering. \\
+2) Vedant does not have a fair knowledge about the Liouville's Constant.\\
+3) If he finds anything related to the Liouville's number in or outside the workplace, he tries to find the usage and applications of the number.\\
+\\
+\hline
+\textbf{Other uses or relations to the Number} \\
+1) According to Vedant, by establishing that a given number is a liouville number, it provides a useful tool for proving a given number is transcendental.\\
+2) There are no practical uses of this Liouville's number.
+\\
+\hline
+\textbf{Influencers that surround the persona and that may influence choices} \\
+1) Team mates\\
+2) Friends\\
+3) Managers\\
+\\
+\hline
+\end{tabular}
+\end{center}
+\vspace{\baselineskip}
+\printbibliography
+\newpage
+{\Large \textbf{Domain Model}}\vspace{1em}
+\begin{figure}[!http]
+    \centering
+    \fbox{\includegraphics[width=\textwidth]{images/Domain.png}}
+\end{figure}
+\newline
+\newline
+\newline
+The above domain model shows functioning of the Calculator which does the basic operations addition,subtraction,division,multiplication etc. It also provides the liouville's constant value when the user needs it.\newline
+\newline
+It displays the results using Graphical User Interface.\newline
+\newline
+\newpage{\Large \textbf{Activity Diagram}}\vspace{1em}
+\begin{figure}[!http]
+    \centering
+    \fbox{\includegraphics[width=\textwidth]{images/BasicActivityDiagram.png}}
+\end{figure}
+\newpage{\Large \textbf{Use Case Diagram}}\vspace{1em}
+\begin{figure}[!http]
+    \centering
+    \fbox{\includegraphics[width=\textwidth]{images/Usecase Diagram.png}}
+    \newline
+    \newline
+    \newline
+    The End User uses the calculator to do operations. The End user can know the liouville's constant by entering the number.  After the calculations are completed the end result is displayed.
+\end{figure}
+\newpage
+\begin{rSection}
+{\Large \textbf{User Stories}}\vspace{1em}
+\end{rSection}
+\newline
+\newline
+User Story 1 :- As a user, I would like to perform basic arithmetic operations in the calculator so that I can see the results(Multiplication, addition, division, subtraction).
+\newline
+\newline
+\newline
+
+User Story 2 :- As a user, I would like to have Liouville's constant button/key(Whenever the constant key is pressed, it asks the user to enter the number for which the user would like to see the liouville's number generated).
+\newline
+\newline
+\newline
+
+User Story 3 :- As a user, I would like to have a natural logarithmic key which calculates and displays the natural log value of input given/number.
+\newline
+\newline
+\newline
+User Story 4:- As a user, I would like to have a history button so that it keeps a track of the values it displayed previously.
+
+\newpage
+\begin{rSection}
+{\Large \textbf{User Story: Input of Operator}}\vspace{1em}
+\end{rSection}
+\newline
+\newline
+\begin{tabular}{|p{7cm}|p{10cm}| }
+\hline
+ Story ID & US1\\
+ \hline
+ Description & As a user, I would like to perform basic arithmetic operations in the calculator so that I can see the results(Multiplication, addition, division, subtraction).  \\
+ \hline
+ Priority & High  \\
+  \hline
+Story Points & 5  \\
+  \hline
+Constraints &   \\
+  \hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}{|p{7cm}|p{10cm}| }
+\hline
+ Story ID & US2\\
+ \hline
+ Description & As a user, I would like to have Liouville's constant button/key(Whenever the constant key is pressed, it asks the user to enter the number for which the user would like to see the liouville's number generated).  \\
+ \hline
+ Priority & Very High  \\
+  \hline
+Story Points & 8  \\
+  \hline
+Constraints &   \\
+  \hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}{|p{7cm}|p{10cm}| }
+\hline
+ Story ID & US3\\
+ \hline
+ Description & As a user, I would like to have a natural logarithmic key which calculates and displays the natural log value of input given/number.  \\
+ \hline
+ Priority & Medium  \\
+  \hline
+Story Points & 3  \\
+  \hline
+Constraints &   \\
+  \hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}{|p{7cm}|p{10cm}| }
+\hline
+ Story ID & US4\\
+ \hline
+ Description &  As a user, I would like to have a history button so that it keeps a track of the value it displayed previously. given/number.  \\
+ \hline
+ Priority & Medium  \\
+  \hline
+Story Points & 3  \\
+  \hline
+Constraints &   \\
+  \hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}{|p{7cm}|p{10cm}| }
+\hline
+ Story ID & US5\\
+ \hline
+ Description &  As a user, I would like to include a clickable element/button with name Clear so that I can clear the values at any time.  \\
+ \hline
+ Priority & Medium  \\
+  \hline
+Story Points & 3  \\
+  \hline
+Constraints &   \\
+  \hline
+\end{tabular}
+\newline
+\newline
+\newline
+\begin{tabular}{|p{7cm}|p{10cm}| }
+\hline
+ Story ID & US6\\
+ \hline
+ Description &  As a user, I would like my calculator to have 10 clickable elements/buttons with one number on each from 0-9 which helps me in entering numbers for any operation.  \\
+ \hline
+ Priority & Medium  \\
+  \hline
+Story Points & 3  \\
+  \hline
+Constraints &   \\
+  \hline
+\end{tabular}
+
+
+\newpage
+\begin{rSection}
+{\Large \textbf{Backward Trace ability Matrix for User Stories}}\vspace{1em}
+\end{rSection}
+\newline
+\newline
+\begin{tabular}{|p{3cm}|p{4cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}| }
+\hline
+ \textbf {   }& \textbf{Use Case} & \textbf{Interview} & \textbf{Surveys} & \textbf{Global}& \textbf{Persona} \\
+ \hline
+ US1-& Arithmetic Calculation & X  &  & &  \\
+ \hline
+ US2- Liouville's Constant & Constant Calulation &  &  & &  \\
+  \hline
+ US3-& Arithmetic Calculation & X &  & &  \\
+  \hline
+ US4-& Display Result,Arithmetic Calculation & X &  & &  \\
+  \hline
+ US5-Clear functionality & Arithmetic Cal. &  & X & X & &\\
+  \hline
+ US6-Clickable Elements & arithmetic Calculation & X &  & & & \\
+  \hline
+\end{tabular}
+\newpage
+\end{document}
