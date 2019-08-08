@@ -1,0 +1,169 @@
+
+
+\documentclass[final]{beamer}
+
+% ====================
+% Packages
+% ====================
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[size=custom,width=120,height=72,scale=1.0]{beamerposter}
+\usetheme{gemini}
+\usecolortheme{gemini}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+% ====================
+% Lengths
+% ====================
+
+% If you have N columns, choose \sepwidth and \colwidth such that
+% (N+1)*\sepwidth + N*\colwidth = \paperwidth
+\newlength{\sepwidth}
+\newlength{\colwidth}
+\setlength{\sepwidth}{0.025\paperwidth}
+\setlength{\colwidth}{0.3\paperwidth}
+
+\newcommand{\separatorcolumn}{\begin{column}{\sepwidth}\end{column}}
+
+% ====================
+% Title
+% ====================
+
+\title{SOEN 6481 Software Requirement Specification \newline
+(Eternity Numbers)}
+
+\author{Venkata Sai Parthasarathi Hemanth Daita }
+
+\institute[]{ \samelineand}
+
+
+
+\begin{document}
+
+\begin{frame}[t]
+\begin{columns}[t]
+\separatorcolumn
+
+\begin{column}{\colwidth}
+
+  \begin{block}{Project Introduction}
+
+    The project is all about designing a calculator which can calculate Liouville's constant and perform basic mathematical operations.\newline\newline
+
+  \end{block}
+\newline
+\newline
+\newline
+  \begin{alertblock}{Calculator And Constant's Overview}
+  The terms in the continued fraction expansion of every Liouville number are unbounded; using a counting argument, one can then show that there must be uncountably many transcendental numbers which are not Liouville.\newline
+    Liouville's constant is a decimal fraction with a 1 in each decimal place corresponding to a factorial n! and zeros everywhere else.\newline
+    Liouville's constant is evaluated using a key
+    placed on a custom designed calculator.\newline
+    \begin{itemize}
+      \item \textbf A key/button is placed at the bottom of the calculator. 
+      \item \textbf Constant value is displayed by entering a number and clicking the liouville button placed at the bottom of the calculator
+      \item \textbf The constant value is dispalyed upto 5040(7!) decimal points.
+      \item \textbf No rational number is transcendental and all real transcendental numbers are irrational.
+    \end{itemize}
+
+  \end{alertblock}
+  \newline
+  \newline
+
+  \begin{block}{Interesting Points About Constant}
+
+
+    \begin{itemize}
+      \item \textbf Liouville's constant is a decimal fraction with a 1 in each decimal place corresponding to a factorial n! and zeros everywhere else.
+      \item \textbf Liouville number was the first decimal constant to be proven transcendental.
+      \item \textbf The gap between two 1's is gradually increased as the number gets larger.
+      \item \textbf All liouville numbers are transcendental but not vice versa.
+    \end{itemize}
+
+  However, a mathematician named Cantor later proved that almost all real numbers are transcendental.
+
+  \end{block}
+  
+  \begin{alertblock}{Applications}
+    There are no practical uses of Liouville's number.
+    However, by establishing that a given number is a Liouville number provides a useful tool for proving a given number is transcendental.
+
+    \begin{itemize}
+      \item \textbf A button has been provided in the calculator which on entering displays if the entered number is a transcendental or not. 
+    \end{itemize}
+
+  \end{alertblock}
+
+\end{column}
+
+\separatorcolumn
+
+\begin{column}{\colwidth}
+
+  \begin{block}{Challenges Faced}
+
+   A number of challenges were encountered while generating the liouville's number
+    \begin{enumerate}
+      \item \textbf Since Liouville number generated has many decimal places(for n>=3), I faced challenge in holding the value in a data type. 
+      \item \textbf Initially, I faced a challenge in choosing the User Interface to use for implementing the calculator.
+      \item \textbf Since, there are no practical uses for the number, I found it difficult to include an application for the constant in the calculator.
+      \item \textbf I found it difficult to calculate the constants' value without using the Java internal math functions.
+      \item \textbf I found it challenging to find someone who has knowledge about my constant.
+    \end{enumerate}
+
+  \end{block}
+
+  \begin{block}{Project Outcome}
+
+   The following is the custom00 designed calculator outcome of the project.
+\begin{figure}[!http]
+    \centering
+    \fbox{\includegraphics[width=\textwidth]{images/calculator.PNG}}
+\end{figure}
+
+  \end{block}
+
+  
+\end{column}
+
+\separatorcolumn
+
+\begin{column}{\colwidth}
+
+  \begin{alertblock}{Critical Decisions Made}
+
+\item \textbf Since generating the liouville number for n value greater than 3 generates a min. of 24 decimal points(120 decimal points for n=5 and so on), and data type can usually hold (double data type) upto 16-17 decimal points, a critical decision had to be made for generating the liouville number for n value greater than 3. After consulting the other team members, I found a solution in holding the values in a data type. Big decimal data type holds values upto 7! decimals (5040 decimal points).
+ \item \textbf A critical decision had to be made regarding the User interface to be used in implementing the calculator. I have chosen using jframes for implementing the calculator rather than command line interface. 
+ \item \textbf found it difficult to constant value generation  without using the internal math functions as it had some complex computations. Eventually found a way to implement it without using math functions.  
+  \end{alertblock}
+
+  \begin{block}{Lessons Learned}
+
+    \begin{enumerate}
+      \item \textbf  I have learned and gained knowledge about transcendental numbers, in particular Liouville number. 
+      \item \textbf I have learned that a transcendental number is a real number that is not the solution of any single-variable polynomial equation whose coefficients are all integers .
+      \item \textbf I have learned that almost all real numbers are transcendental.
+       \item \textbf I have found various ways to obtain the critical information about the constant via surveys, persona, interviews etc.
+       \item \textbf I found a way to shortlist the main user stories which can have a great impact on the project based on the following factors such as estimation points, constraints, priority etc.
+        \item \textbf Initially, I designed without including any application for my constant. On review and advice by one of my team members, I have included an application for my number.
+        \item \textbf  There were few computational errors. On reviewing and testing by one of the team members, I was able to find the errors and rectify early.
+    \end{enumerate}
+
+  \end{block}
+  \begin{alertblock}{Conclusion}
+
+    Implemented a custom designed calculator which calculates and displays the liouville's constant. I have gained a fair knowledge about irrational numbers, transcendental numbers and my constant.
+
+  \end{alertblock}
+
+\end{column}
+
+\separatorcolumn
+\end{columns}
+\end{frame}
+
+\end{document}
